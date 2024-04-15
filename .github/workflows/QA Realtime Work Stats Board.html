@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            z-index: 1001;
+            position: fixed;
+            top: 0;
+        }
+        nav {
+            background-color: #f4f4f4;
+            padding: 10px;
+            z-index: 1000;
+            position: relative;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        main {
+            padding: 100px 10px 10px; /* Adjusted top padding to reduce space */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            position: relative;
+            z-index: 999;
+        }
+        section {
+            border: 5px solid #ccc;
+            margin-bottom: 5px;
+            padding: 5px;
+            flex: 0 1 calc(20% - 20px);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+            word-wrap: break-word; /* Added to wrap long content */
+            text-align: center; /* Center align content */
+            padding: 8px; /* Add padding */
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold; /* Make headers bold */
+        }
+        .shrinkage-table {
+            margin-top: 80px; /* Reduced top margin */
+            border-collapse: collapse;
+            width: 100%;
+        }
+        .shrinkage-table th, .shrinkage-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+	    word-wrap: break-word; /* Added to wrap long content */
+            width: 10%; /* Equal width for each cell */
+        }
+        .green {
+            background-color: lightgreen;
+        }
+        .red {
+            background-color: lightcoral;
+        }
+        .amber {
+            background-color: #ffbf00;
+        }
+
+        /* Responsive styles */
+        @media only screen and (max-width: 768px) {
+            main {
+                flex-direction: column;
+                align-items: center;
+            }
+            section {
+                width: 100%;
+                margin-right: 0;
+            }
+        }
+
+        /* Scrolling banner animation */
+        .banner {
+            width: 100%;
+            background-color: #f3f3f3;
+            color: black;
+            padding: 10px 0;
+            overflow: hidden;
+            white-space: nowrap;
+            position: center;
+            top: 60px; /* Reduced top margin */
+            left: 0;
+            z-index: 1000;
+        }
+        .banner p {
+            display: inline-block;
+            padding: 0 20px;
+            font-size: 40px;
+            animation: marquee 50s linear infinite;
+        }
+        @keyframes marquee {
+            100% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+       /* Additional animations */
+.additional-animation-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding: 20px; /* Adjust padding as needed */
+    box-sizing: border-box;
+    z-index: 1000;
+}
+.additional-animation {
+    width: calc(25% - 10px);
+    text-align: center;
+    font-size: 40px; /* Adjust font size as needed */
+    color: navy;
+    animation: slide-in 1s forwards, dance 1s infinite;
+}
+        #lte-audits,
+        #management-escalations {
+            animation-delay: 0.5s; /* Delay animation for better visibility */
+        }
+        @keyframes slide-in {
+            0% { transform: translateY(100%); }
+            100% { transform: translateY(0); }
+        }
+        @keyframes dance {
+            0% { transform: translateX(-5px); }
+            50% { transform: translateX(5px); }
+            100% { transform: translateX(-5px); }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>QA Realtime Work Stats Board</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#Vignesh">Vignesh</a></li>
+   	<li><a href="#Jaya">Jaya</
+
+a></li>
+        <li><a href="#Haritha">Haritha</a></li>
+        <li><a href="#Poongundran">Poongundran</a></li>
+        <li><a href="#Dharani">Dharani</a></li>
+        <li><a href="#Pritika">Pritika</a></li>
+        <li><a href="#Priyanka">Priyanka</a></li>
+        <li><a href="#Ajith">Ajith</a></li>
+        <li><a href="#Sandhya">Sandhya</a></li>
+        <li><a href="#Nivitha">Nivitha</a></li>
+
+        <!-- Add other list items here -->
+    </ul>
+</nav>
+
+<main>
+
+   <section id="Vignesh">
+        <h2><center>Vignesh</center></h2>
+        <h3><center>Things I am occupied with for this week</center></h3>
+        <table>
+            <tr>
+                <th>Audit</th>
+                <th>RCA</th>
+                <th>Adhoc</th>
+                <th>Meetings</th>
+                <th>Availability</th>
+            </tr>
+            <tr>
+                <td>Workload to go Live on Tuesday</td>
+                <td>Sheet RCAs -Yet to be assigned and realtime RCAs</td>
+                <td>None</td>
+                <td>None</td>
+                <td>All 4 days</td>
+            </tr>
+        </table>
+    </section>
+
+
+<section id="Jaya">
+        <h2><center>Jaya</center></h2>
+                        <h3><center>Things I am occupied with for this week</center></h3>
+                <table>
+                    <tr>
+                        <th>Audits</th>
+                        <th>RCA</th>
+                        <th>Adhoc</th>
+                        <th>Meetings</th>
+			<th>Availability</th>
+
+                    </tr>
+                    <tr>
+               <td>69 Ticket Audits(Last Weeks pending)</td>
+                <td>Sheet RCAs -Yet to be assigned and realtime RCAs</td>
+                <td>None</td>
+                <td>None</td>
+                <td>All 4 days</td>
+            </tr>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </table>
+            </div>
+               </section>
+
+
+<section id="Haritha">
+        <h2><center>Haritha</center></h2>
+                       <h3><center>Things I am occupied with for this week</center></h3>
+                <table>
+                    <tr>
+                        <th>Audits</th>
+                        <th>RCA</th>
+                        <th>Adhoc</th>
+                        <th>Meetings</th>
+			<th>Availability</th>
+                    </tr>
+                    <tr>
+               <td>Workload to go Live on Tuesday</td>
+                <td>Sheet RCAs -Yet to be assigned and realtime RCAs</td>
+                <td>None</td>
+                <td>None</td>
+                <td>All 4 days</td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </table>
+            </div>
+               </section>
+
+    <section id="Poongundran">
+        <h2><center>Poongundran</center></h2>
+                        <h3><center>Things I am occupied with for this week</center></h3>
+                <table>
+                    <tr>
+                        <th>Audits</th>
+                        <th>RCA</th>
+                        <th>Adhoc</th>
+                        <th>Meetings</th>
+			<th>Availability</th>
+                    </tr>
+                    <tr>
+                 <td>Workload to go Live on Tuesday</td>
+                <td>Sheet RCAs -Yet to be assigned and realtime RCAs</td>
+                <td>None</td>
+                <td>None</td>
+                <td>All 4 days</td>
+
+ </tr>
+                    <!-- Add more rows as needed -->
+                </table>
+            </div>
+               </section>
+
+    <section id="Dharani">
+        <h2><center>Dharani</center></h2>
+                        <h3><center>Things I am occupied with for this week</center></h3>
+                <table>
+                    <tr>
+                        <th>Audits</th>
+                        <th>RCA</th>
+                        <th>Adhoc</th>
+                        <th>Meetings</th>
+			<th>Availability</th>
+                    </tr>
+                    <tr>
+                  <td>Workload to go Live on Tuesday</td>
+                <td>Sheet RCAs -Yet to be assigned and realtime RCAs</td>
+                <td>None</td>
+                <td>None</td>
+                <td>All 4 days</td>
+
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </table>
+            </div>
+               </section>
+
+
+    <section id="Pritika">
+        <h2><center>Pritika</center></h2>
+                        <h3><center>Things I am occupied with for this week</center></h3>
+                <table>
+                    <tr>
+                        <th>Audits</th>
+                        <th>RCA</th>
+                        <th>Adhoc</th>
+                        <th>Meetings</th>
+			<th>Availability</th>
+                    </tr>
+                    <tr>
+               <td>69 Ticket Audits(Last Weeks pending), Premium RSLA-13, Premium FRSLA-3</td>
+                <td>Sheet RCAs -Yet to be assigned and realtime RCAs</td>
+                <td>None</td>
+                <td>None</td>
+                <td>3 days</td>
+
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </table>
+            </div>
+               </section>
+
+    <section id="Priyanka">
+        <h2><center>Priyanka</center></h2>
+                        <h3><center>Things I am occupied with for this week</center></h3>
+                <table>
+                    <tr>
+                        <th>Audits</th>
+                        <th>RCA</th>
+                        <th>Adhoc</th>
+                        <th>Meetings</th>
+			<th>Availability</th>
+                    </tr>
+                    <tr>
+                <td>Workload to go Live on Tuesday, Premium RSLA-12, Premium FRSLA-4 </td>
+                <td>Sheet RCAs -Yet to be assigned and realtime RCAs</td>
+                <td>None</td>
+                <td>None</td>
+                <td>All 4 days</td>
+
+                    <!-- Add more rows as needed -->
+                </table>
+            </div>
+               </section>
+
+    <section id="Ajith">
+        <h2><center>Ajith</center></h2>
+                       <h3><center>Things I am occupied with for this week</center></h3>
+                <table>
+                    <tr>
+                        <th>Audits</th>
+                        <th>RCA</th>
+                        <th>Adhoc</th>
+                        <th>Meetings</th>
+			<th>Availability</th>
+                    </tr>
+                    <tr>
+               
+                  <td>Workload to go Live on Tuesday</td>
+                <td>Sheet RCAs -Yet to be assigned and realtime RCAs</td>
+                <td>None</td>
+                <td>None</td>
+                <td>All 4 days</td>
+
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </table>
+            </div>
+               </section>
+
+ <section id="Sandhya">
+        <h2><center>Sandhya</center></h2>
+                       <h3><center>Things I am occupied with for this week</center></h3>
+                <table>
+                    <tr>
+                        <th>Audits</th>
+                        <th>RCA</th>
+                        <th>Adhoc</th>
+                        <th>Meetings</th>
+			<th>Availability</th>
+                    </tr>
+                    <tr>
+                 
+                  <td>Premium Adherence Audits followed by SLA audits</td>
+                <td>None</td>
+                <td>None</td>
+                <td>None</td>
+                <td>2 days</td>
+
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </table>
+            </div>
+               </section>
+
+ <section id="Nivitha">
+        <h2><center>Nivitha</center></h2>
+                       <h3><center>Things I am occupied with for this week</center></h3>
+                <table>
+                    <tr>
+                        <th>Audits</th>
+                        <th>RCA</th>
+                        <th>Adhoc</th>
+                        <th>Meetings</th>
+			<th>Availability</th>
+                    </tr>
+                    <tr>
+                   
+                  <td>Premium Adherence Audits followed by SLA audits</td>
+                <td>None</td>
+                <td>None</td>
+                <td>None</td>
+                <td>All 4 days</td>
+
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </table>
+            </div>
+               </section>
+
+
+    <!-- Add other sections here -->
+
+
+
+</main>
+
+
+<div class="banner">
+    <p>Real-time hot events: *** RevOps is yet to share across the Escalations data for this week due to which Expedite / Not expedite audits are yet to be performed and updated in the sheet *** Qpex is formulating a process flow for the QA flag function in the tickets which the QAs will be migrating from capturing Expedite / Not Expedites from Google sheets to updating the flag in the Product directly. </p>
+</div>
+
+<div class="additional-animation-container">
+    <div class="additional-animation" id="management-escalations">
+        Escalation Data not yet received from RevOps
+    </div>
+
+    <div class="additional-animation" id="lte-audits">
+        Playvox Agent Scorecard audits pending from last week
+    </div>
+
+    <div class="additional-animation" id="priority-adhoc">
+        RCAs for last week have been completed
+    </div>
+
+    <div class="additional-animation" id="management-escalation">
+        Lead Valid / Invalid pushback audits are being worked upon
+    </div>
+</div>
+
+
+
+<section id="TeamShrinkageStats">
+    <h2><center>Team Shrinkage Stats (80% Capacity)</center></h2>
+
+
+    <table class="shrinkage-table">
+        <tr>
+            <th>Vignesh</th>
+            <th>Jaya</th>
+            <th>Haritha</th>
+            <th>Poongundran</th>
+	    <th>Dharani</th>
+            <th>Pritika</th>
+            <th>Priyanka</th>
+            <th>Ajith</th>
+	    <th>Sandhya</th>
+	    <th>Nivitha</th>
+
+            <!-- Add other table headers here -->
+        </tr>
+        <tr>
+
+<td class
+
+="green">Present</td>
+         
+<td class="green">Present</td>
+      
+<td class="amber">Work From Home</td>
+           
+<td class="amber">Work From Home</td>
+           
+<td class="amber">Work From Home</td>
+          
+<td class="red">Leave</td>
+          
+<td class="green">Present</td>
+           
+<td class="green">Present</td>
+
+<td class="red">Leave</td>
+
+<td class="amber">Work From Home</td>
+
+            <!-- Add other table cells here -->
+        </tr>
+    </table>
+</section>
+
+
+</body>
+</html>
